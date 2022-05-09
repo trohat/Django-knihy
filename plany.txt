@@ -1,0 +1,11 @@
+zbývá 10 večerů
+4 - Django
+Django - formuláře
+
+class based views (ano)
+
+testování (spíše ne), sessions(asi ano) autenthication (ano), 
+deployment (asi vynecháme)
+
+čtyři - projekt
+poslední dva - pokročilý Python
