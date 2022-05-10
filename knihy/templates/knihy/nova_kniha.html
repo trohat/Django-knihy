@@ -11,8 +11,7 @@
 
     <form method="POST" action="/">
         {% csrf_token %}
-        <label for="jmeno">Zadej jméno knihy:</label>
-        <input type="text" id="jmeno" name="jmeno" placeholder="Sem piš! Nikam jinam...">
+        {{ form }}
         <button>Odešli</button>
     </form>
 </body>
