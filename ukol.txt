@@ -1,0 +1,3 @@
+Vyberte si jakýkoliv z Vašich rozdělaných projektů (nebo si založte projekt nový) a přidělejte si do něj formuláře na zadávání 
+nových objektů (kniih, měst, zvířat, skautů, ...) z pohledu uživatele (tj. ne adminem). Můžete použít Forms nebo Modelforms. Ideálně
+použijte obojí, ať si to procvičíte.

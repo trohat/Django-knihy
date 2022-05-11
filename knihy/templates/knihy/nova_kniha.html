@@ -11,7 +11,9 @@
 
     <form method="POST" action="/">
         {% csrf_token %}
-        {{ form }}
+        <table class="knihy-form">
+            {{ form.as_table }}
+        </table>
         <button>Odešli</button>
     </form>
 </body>
