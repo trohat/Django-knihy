@@ -1,0 +1,10 @@
+{% extends 'knihy/base.html' %}
+
+{% block title %}Odhlášeno{% endblock title %}
+
+{% block content %}
+<p>
+Byl/a jsi úspěšně odhlášen/a ze systému.
+</p>
+<a href="{% url 'login' %}">Zpět na přihlášení.</a>
+{% endblock content %}

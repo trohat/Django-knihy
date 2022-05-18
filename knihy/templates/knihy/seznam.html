@@ -9,5 +9,8 @@
         <li><a href="{{ kniha.get_absolute_url }}">{{ kniha.autor }}: {{ kniha.jmeno }}</a></li>
         {% endfor %}
     </ol>
+    <p>Tvoje poslední prohlížená kniha {% if qposledni != "žádná" %}je{% else %}není{% endif %} {{ posledni }}.</p>
 {% endblock content %}
+
+
 

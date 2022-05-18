@@ -7,7 +7,20 @@
     <title>{% block title %}Stránka o knihách{% endblock %}</title>
 </head>
 <body>
-    {% block content %}
+    {% if user.is_authenticated %}
+    <p>Ahoj, jsi přihlášen jako {{ user.username }}.</p>
+    <p>Tvoje příjmení je {{ user.last_name }}.</p>
+    {% endif %}
+    <ul>
+        <li><a href="{% url 'seznam_knih' %}">Seznam knih</a></li>
+        <li><a href="{% url 'formular' %}">Zadání nové knihy</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'logout' %}">Odhlásit se</a></li>
+        {% else %}
+        <li><a href="{% url 'login' %}">Přihlásit se</a></li>
+        {% endif %}
+    </ul>
+    {% block content %}  
     <p>Tato stránka není dodělaná...</p>
     {% endblock %}
 </body>

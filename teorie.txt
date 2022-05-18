@@ -1,0 +1,7 @@
+DEPLOYMENT
+- hosting provider - AWS, Digital Ocean, Heroku, a mnoho dalších
+- databáze - SQL(ano) vs. NoSQL(nezajímá nás, je to jiný typ databáze)
+- databáze - MySQL, PostgreSQL, MSSQL (nebo stačí SQLite a nic neřešíte)
+- statické soubory - u Amazonu třeba S3
+- upravit nastavení, plus stránky pro chyby 404 a 500
+
