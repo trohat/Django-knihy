@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seznam knih</title>
-</head>
-<body>
+{% extends "knihy/base.html" %}
+
+{% block title %}Seznam knih{% endblock %}
+
+{% block content %}
     <h1>Moje oblíbené knihy:</h1>
     <ol>
         {% for kniha in knihy %}
         <li><a href="{{ kniha.get_absolute_url }}">{{ kniha.autor }}: {{ kniha.jmeno }}</a></li>
         {% endfor %}
     </ol>
-</body>
-</html>
+{% endblock content %}
+

@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kniha</title>
-</head>
-<body>
+{% extends "knihy/base.html" %}
+
+{% block title %}Kniha{% endblock %}
+
+{% block content %}
    <h1>{{ kniha.jmeno }}</h1>
    <h2>{{ kniha.autor }}</h2>
    <p>{{ kniha.recenze }}</p>
    <p><a href="{% url "seznam_knih" %}">Zpět na seznam knih</a></p>
-</body>
-</html>
+{% endblock %}
+

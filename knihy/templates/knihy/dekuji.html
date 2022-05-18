@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poděkování</title>
-</head>
-<body>
+{% extends "knihy/base.html" %}
+
+{% block title %}Poděkování{% endblock %}
+
+{% block content %}
     <h1>Děkujeme za vložení nové knihy do databáze.</h1>
     <a href="{% url "formular" %}">Zpět na zadávání knížek</a>
-    <p>A na závěr perlička: jméno mého slona je {{ jmeno_slona }}</p>
-</body>
-</html>
+{% endblock %}
+
