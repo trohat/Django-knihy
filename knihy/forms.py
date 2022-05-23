@@ -34,5 +34,8 @@ class KnihaForm(forms.ModelForm):
                     "max_length": "Toto je moc dlouhý text, povoleno je maximálně 20 znaků."
                 }
         }
+        widgets = {
+            'release': forms.widgets.DateInput(attrs={'type': 'date'}),
+        }
 
 

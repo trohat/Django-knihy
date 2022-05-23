@@ -7,6 +7,7 @@ class Kniha(models.Model):
     jmeno = models.CharField(max_length=20)
     autor = models.CharField(max_length=200)
     recenze = models.TextField()
+    release = models.DateField()
 
     def get_absolute_url(self):
         return reverse("detail", args=[str(self.id)])
