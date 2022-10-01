@@ -1,0 +1,15 @@
+{% extends "knihy/base.html" %}
+
+{% block title %}Testování{% endblock  %}
+
+{% block content %}
+    <h1>Formulář na testování regexů</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        <table class="knihy-form">
+            {{ form.as_table }}
+        </table>
+        <button>Odešli</button>
+    </form>
+{% endblock content %}

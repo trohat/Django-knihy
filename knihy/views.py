@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import Kniha
-from .forms import KnihaForm
+from .forms import KnihaForm, MyForm
 # Create your views here.
 
 class NovaKniha2(LoginRequiredMixin, FormView):
@@ -31,6 +31,16 @@ def detail(request, pk):
     kniha = Kniha.objects.get(pk=pk)
     request.session["posledni"] = kniha.jmeno
     return render(request, "knihy/detail.html", {"kniha": kniha})
+
+def my_form(request):
+    print("ahoj")
+    if request.method == "POST":
+        form = MyForm(request.POST)
+        if form.is_valid():
+            return redirect("podekovani")
+    else:
+        form = MyForm()
+    return render(request, "knihy/my_form.html", {"form": form})
 
 
 # tohle teď už neplatí --- tohle jsou view funkce

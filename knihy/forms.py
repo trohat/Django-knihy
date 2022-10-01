@@ -1,4 +1,5 @@
 from django import forms
+from django.core.validators import RegexValidator
 
 
 """
@@ -14,7 +15,9 @@ class KnihaForm(forms.Form):
         label="Recenze knihy",
         widget=forms.Textarea)
 """
-
+class MyForm(forms.Form):
+    jmeno = forms.CharField(max_length=200, 
+    validators=[RegexValidator(regex=r"cat|dog", message='Zadej slovo "cat".')])
 
 from .models import Kniha
 
@@ -37,5 +40,6 @@ class KnihaForm(forms.ModelForm):
         widgets = {
             'release': forms.widgets.DateInput(attrs={'type': 'date'}),
         }
+      
 
 
